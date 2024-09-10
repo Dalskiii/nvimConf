@@ -20,7 +20,12 @@ return require('packer').startup(function(use)
 		  vim.cmd('colorscheme tokyonight')
 	  end
   })
-
+  use {
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+          'nvim-tree/nvim-web-devicons', -- optional
+      },
+  }
   use({
       "folke/trouble.nvim",
       config = function()

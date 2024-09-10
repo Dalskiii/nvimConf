@@ -42,6 +42,19 @@ lsp.configure('lua-language-server', {
 })
 
 
+lsp.configure('clangd', {
+    settings = {
+        clangd = {
+            arguments = {
+                "-style='{IndentWidth: 4, TabWidth: 4, UseTab: Never}'",
+                "-I/usr/include/c++/<13>",
+                "-I/usr/include/x86_64-linux-gnu/c++/<13>",
+                "-I/usr/lib/gcc/x86_64-linux-gnu/<version>/include",
+                "-gcc-toolchain=/usr/bin/gcc"
+            }
+        }
+    }
+})
 local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({

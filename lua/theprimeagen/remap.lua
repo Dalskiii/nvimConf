@@ -1,6 +1,7 @@
 
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+-- Set up a keybind for <leader>pv to toggle and focus nvim-tree
+vim.api.nvim_set_keymap('n', '<leader>pv', ':NvimTreeFindFile<CR>', { noremap = true, silent = true })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
