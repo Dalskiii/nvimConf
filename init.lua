@@ -63,7 +63,7 @@ function CompileCppProject()
 
         -- Check if the executable ran successfully
         if vim.v.shell_error == 0 then
-            print("Program executed successfully:\n" .. run_result)
+            print("Program executed successfully:\n\n" .. run_result)
         else
             -- Check if it's a runtime error (segmentation fault, etc.) or a system error (architecture, etc.)
             if run_result:find("Exec format error") then
